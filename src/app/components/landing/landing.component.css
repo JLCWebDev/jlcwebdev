@@ -1,0 +1,25 @@
+.main {
+    height: 70vh;
+    background-image: url('/assets/IMG1.png');
+    background-size: cover;
+    
+}
+
+.text-area {
+    display: flex;
+    flex-direction: column;
+    padding: 3vw;
+    padding-left: 5vw;
+    padding-top: 20vh;
+    width: 45vw;
+    /* text-align: center; */
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 4vw;
+    background-image: linear-gradient(rgb(139, 191, 240), rgb(32, 48, 117));
+    letter-spacing: 2px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}

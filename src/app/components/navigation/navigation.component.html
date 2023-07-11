@@ -1,0 +1,35 @@
+<header>
+	<nav class="navbar">
+	  <div class="navbar_container">
+		<a class="navbar-brand"><img src="/assets/2.png" alt=""></a>
+		<div
+		  class="navbar__toggle"
+		  id="mobile-menu"
+		  class="{{ mobileM }}"
+		  (click)="mobile()"
+		>
+		  <span class="bar"></span>
+		  <span class="bar"></span>
+		  <span class="bar"></span>
+		</div>
+		<ul class="nav" class="navbar_menu" class="{{ mobileMenu }}">
+		  <li class="nav-item" class="navbar__item" (click)="mobile()">
+			<a class="nav-link" (click)="ScrollService.goTo('Home')">Home</a>
+		  </li>
+		  <li class="nav-item" class="navbar__item" (click)="mobile()">
+			<a class="nav-link" (click)="ScrollService.goTo('aboutMe')"
+			  >Services</a
+			>
+		  </li>
+		  <li class="nav-item" class="navbar__item" (click)="mobile()">
+			<a class="nav-link" (click)="ScrollService.goTo('projects')"
+			  >Our Work</a
+			>
+		  </li>
+		  <li class="nav-item" class="navbar__item" (click)="mobile()">
+			<a (click)="ScrollService.goTo('contactme')" class="nav-link">Contact Us</a>
+		</ul>
+		
+	  </div>
+	</nav>
+  </header>
