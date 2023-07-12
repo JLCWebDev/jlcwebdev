@@ -1,1 +1,16 @@
-<p>examples works!</p>
+<div class="main">
+  <h1>Our Work</h1>
+  <div class="examples">
+    <mat-card
+      class="card"
+      style="background-image: linear-gradient(
+        rgba(0, 0, 0, 0.438) 70%,
+        rgba(0, 0, 0, 0.438) 95%
+      ), url({{ cards.image }});"
+      *ngFor="let cards of websites"
+    >
+      <p>{{ cards.name }}</p>
+      <button>See More</button>
+    </mat-card>
+  </div>
+</div>

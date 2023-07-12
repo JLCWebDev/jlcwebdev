@@ -1,7 +1,9 @@
 .main {
-    height: 70vh;
+
+    height: 55vw;
     background-image: url('/assets/IMG1.png');
-    background-size: cover;
+    background-size: contain;
+    max-height: 80vh;
     
 }
 

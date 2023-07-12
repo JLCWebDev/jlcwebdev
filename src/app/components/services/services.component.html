@@ -1,5 +1,21 @@
 <div class="main">
-    <div class="main-service">
-        
-    </div>
+  <div class="main-service">
+    <mat-card *ngFor="let service of services" class="card">
+      <img src="{{ service.img }}" alt="" />
+      <h3>{{ service.name }}</h3>
+      <p>{{ service.description }}</p>
+      <ul>
+        <li *ngFor="let a of service.list">{{ a }}</li>
+      </ul>
+      <div class="buttons">
+        <p>
+          STARTING AT: <span>{{ service.price }}</span>
+        </p>
+      </div>
+      <div class="btns"><a href="{{ service.link }}">Learn More</a></div>
+    </mat-card>
+  </div>
+  <div class="addServ">
+    <h3>Additional Services</h3>
+  </div>
 </div>

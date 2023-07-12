@@ -1,3 +1,98 @@
 .main {
-    height: 100vh;
+    height: auto;
+}
+
+img {
+    width: 10vw !important;
+    align-self: center !important;
+}
+
+.main-service {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* display: grid;
+    grid-template-areas: "1 1 1" 
+                        "1 1 1"; */
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    padding: 1vw;
+}
+
+.card {
+    width: 30vw;
+    height: auto;
+    display: flex;
+    background-color: rgb(72, 80, 107);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: rgb(255, 255, 255);
+    padding: 1vw 2vw;
+    /* border: rgb(146, 146, 146) 3px solid; */
+    border-radius: 1vw;
+}
+
+.card h3 {
+    text-align: center;
+}
+
+.card p {
+    font-size: 1.1vw;
+    font-weight: 900;
+}
+
+ul li {
+    font-size: 1vw;
+    padding: 0.1vh;
+    text-align: start;
+}
+
+.buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+}
+
+.buttons p {
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    font-size: 0.8rem;
+    margin: 0;
+    font-weight: 300;
+    padding-bottom: 1.5vw;
+}
+
+p span {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: rgb(123, 224, 123);
+}
+
+a { 
+    position: absolute;
+    bottom: -10px;
+    border-radius: 5px;
+    padding: 0.8vw 1.3vw;
+    background-color: rgb(51, 124, 184);
+    text-decoration: none;
+    color: white;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addServ {
+    margin: 5vh 0;
+    padding: 1vw;
+    text-align: center;
+    color: white;
+    width: 100vw;
+    background-color:rgb(72, 80, 107);
+    height: 25vh;
 }

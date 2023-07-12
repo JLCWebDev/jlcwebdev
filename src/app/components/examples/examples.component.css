@@ -1,0 +1,25 @@
+.examples {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1.5vw;
+    gap: 1vw;
+}
+
+.card {
+    width: 23vw;
+    height: 20vw;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.card p {
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    padding-top: 60%;
+    font-size: 1.5rem;
+}

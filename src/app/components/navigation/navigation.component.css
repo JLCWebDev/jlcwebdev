@@ -31,8 +31,10 @@ header {
     align-items: center;
     justify-content: center;
     font-size: 1.1rem;
-    position: sticky;
+    position: fixed;
+    width: 100vw;
     top: 0;
+    padding: 0;
     z-index: 998;
   }
   
@@ -51,15 +53,15 @@ header {
   
   .navbar_container {
     align-items: center;
-    background-color: rgb(238, 238, 238);
+    height: 8vh;
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-between;
-    height: 50px;
     z-index: 1;
     width: 100%;
     max-width: auto;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 1vh 50px;
   }
   
   .navbar_menu {
