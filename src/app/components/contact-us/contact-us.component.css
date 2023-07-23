@@ -1,0 +1,106 @@
+.main {
+    max-width: 1200px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    height: 66vh;
+    margin: 5vh 8vw;
+    border-radius: 1vw;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    color: white;
+    background-color:#35477d;
+    height: 100%;
+    padding: 6vh 5vw;
+    border-radius: 0 1vw 1vw 0;
+    gap: 1.5vh 0;
+}
+
+.forms {
+    border-radius: 1vw 0 0 1vw;
+    height: 100%;
+    gap: 1vh 1vw;
+    padding: 6vh 5vw;
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    background-color: rgb(240, 240, 240);
+}
+
+.line {
+    display: flex;
+    flex-direction: row;
+    gap: 1vh 1vw;
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+input {
+    color: black !important;
+    background-color:rgb(240, 240, 240);
+    border: none;
+    border-bottom: 1px solid black ;
+    padding: 5px 0;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+}
+
+.Message {
+    height: 18vh;
+}
+
+textarea {
+    height: 100%;
+    border-bottom: 1px solid black ;
+    padding: 5px 0;
+    width: 100%;
+    outline: none;
+    background-color: rgb(240, 240, 240);
+}
+
+button {
+    margin-top: 2vh;
+    background-color: #35477d;
+    width: 12vw;
+    color: white;
+    padding: 1.5vh 1vw;
+    border-radius: 4px;
+}
+
+label {
+    color: rgb(163, 163, 163);
+    padding: 1.5vh 0;
+}
+
+input::placeholder, textarea::placeholder {
+    color: black;
+}
+
+img {
+    width: 3vh;
+}
+
+a {
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+}
+
+a:hover {
+    opacity: 0.7;
+}

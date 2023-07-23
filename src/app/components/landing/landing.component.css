@@ -4,6 +4,8 @@
     background-image: url('/assets/IMG1.png');
     background-size: contain;
     max-height: 80vh;
+    background-repeat: no-repeat;
+    background-position: center;
     
 }
 
@@ -11,15 +13,18 @@
     display: flex;
     flex-direction: column;
     padding: 3vw;
-    padding-left: 5vw;
+    padding-left: 10vw;
     padding-top: 20vh;
-    width: 45vw;
+    width: 50vw;
+    max-width: 900px;
+    height: auto;
     /* text-align: center; */
 }
 
 h1 {
+    line-height: normal;
     font-weight: 900;
-    font-size: 4vw;
+    font-size: 3rem;
     background-image: linear-gradient(rgb(139, 191, 240), rgb(32, 48, 117));
     letter-spacing: 2px;
     -webkit-text-fill-color: transparent;

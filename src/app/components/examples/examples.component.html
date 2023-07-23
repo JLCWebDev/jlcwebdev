@@ -1,16 +1,23 @@
 <div class="main">
   <h1>Our Work</h1>
+    <ul class="p-4 space-x-4 ">
+      <li>Basic Web</li>
+      <li>Growth Web</li>
+      <li>Elite Web</li>
+      <li>Shop Web</li>
+      <li>Enterprise Web</li>
+    </ul>
   <div class="examples">
     <mat-card
       class="card"
       style="background-image: linear-gradient(
         rgba(0, 0, 0, 0.438) 70%,
         rgba(0, 0, 0, 0.438) 95%
-      ), url({{ cards.image }});"
+      ), url({{ cards.image }})"
       *ngFor="let cards of websites"
     >
       <p>{{ cards.name }}</p>
-      <button>See More</button>
+      <button >See More</button>
     </mat-card>
   </div>
 </div>

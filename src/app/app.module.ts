@@ -9,6 +9,8 @@ import { ExamplesComponent } from './components/examples/examples.component';
 import { CardModule } from 'primeng/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
+import { FooterComponent } from './components/footer/footer.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { MatCardModule } from '@angular/material/card';
     NavigationComponent,
     ServicesComponent,
     LandingComponent,
-    ExamplesComponent
+    ExamplesComponent,
+    FooterComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,

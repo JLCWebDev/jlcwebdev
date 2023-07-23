@@ -4,7 +4,7 @@
       <img src="{{ service.img }}" alt="" />
       <h3>{{ service.name }}</h3>
       <p>{{ service.description }}</p>
-      <ul>
+      <ul class="list-disc ps-2" >
         <li *ngFor="let a of service.list">{{ a }}</li>
       </ul>
       <div class="buttons">
@@ -12,10 +12,28 @@
           STARTING AT: <span>{{ service.price }}</span>
         </p>
       </div>
-      <div class="btns"><a href="{{ service.link }}">Learn More</a></div>
+      <div class="btns p-1"><a href="{{ service.link }}">Learn More</a></div>
     </mat-card>
   </div>
   <div class="addServ">
     <h3>Additional Services</h3>
+    <div class="addSer flex content-around justify-center gap-20"   >
+      <div class="cards">
+        <img src="" alt="">
+        <h4>Website Services</h4>
+      </div>
+      <div class="cards">
+        <img src="" alt="">
+        <h4>Website Updates</h4>
+      </div>
+      <div class="cards">
+        <img src="" alt="">
+        <h4>SEO Services</h4>
+      </div>
+      <div class="cards">
+        <img src="" alt="">
+        <h4>Analytics Reporting</h4>
+      </div>
+    </div>
   </div>
 </div>
