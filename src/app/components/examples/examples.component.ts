@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
+import { WebsitesService } from 'src/app/services/websites.service';
 
 @Component({
   selector: 'app-examples',
@@ -6,6 +8,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./examples.component.css']
 })
 export class ExamplesComponent {
+
+
+  currentWebsite: Website = this.websiteService.onlyPokies;
+  
+	constructor(
+    config: NgbModalConfig, 
+    private modalService: NgbModal,
+    public websiteService: WebsitesService) {
+		// customize default values of modals used by this component tree
+		config.backdrop = 'static';
+		config.keyboard = false;
+	}
+
+  displayWebsites: Website[] = this.websiteService.Allwebsites;
+
+	open(content: any) {
+		this.modalService.open(content);
+	}
+
 
 websites: Website[] = [
   new Website(
