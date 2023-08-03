@@ -1,22 +1,28 @@
+
 .examples {
     display: grid;
-    grid-template-areas: "1 1 1 1";
+    grid-template-areas: "1 1 1";
     width: auto;
     margin: 0;
 }
 
 .card {
-    width: 100%;
+
     background-size: cover;
     background-position: center;
+    height: 30vh;
+    width: 32.9vw;
+}
 
+.card:hover {
+    cursor: pointer;
 }
 
 .card p {
     color: white;
     text-align: center;
     font-weight: 900;
-    padding-top: 60%;
+    padding-top: 25vh;
     font-size: 1.5rem;
 }
 
@@ -29,10 +35,123 @@ ul {
     justify-content: center;
 }
 
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
 
+.modal-body {
+    display: flex;
+    flex-direction: row;
+    gap: 1vh 1vw;
+    max-height: 55vh;
+}
 
-.websiteCard img {
-    width: 80vw;
+.mainImg {
+    width: 70vw;
+    max-width: 1350px;
+}
+
+.addImg {
+    width: 10vw;
+    max-width: 200px;
+}
+
+h4 {
+    margin: 0 !important;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh 0vw;
+    overflow: auto;
+    padding-right: 4px;
 }
 
 
+
+
+
+.gallery img {
+    background-color: black;
+}
+
+.gallery img:hover {
+    cursor: pointer;
+    border: black 2px solid;
+}
+
+.active {
+    border: black 2px solid;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.description {
+    padding: 2vh 3vw;
+}
+
+.chips {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0 1vw ;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2vh;
+}
+
+.chip {
+    background-color: #48506b;
+    color: white;
+    padding: 0.5vh 1vw;
+    border-radius: 1rem;
+
+}
+
+.desc {
+    background-color: #ffffff;
+    color: black;
+    padding: 2vh 3vw;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+@media only screen and (max-width: 650px) {
+    .examples {
+        grid-template-areas: "1";
+    }
+
+    .card {
+        width: 100vw;
+        height: 25vh;
+    }
+
+    .card p {
+        padding-top: 21vh;
+    }
+
+    .gallery {
+        flex-direction: row;
+        width: 80vw;
+    }
+
+    .modal-body {
+        flex-direction: column;
+    }
+
+    .addImg {
+        width: 30vw;
+    }
+
+    .mainImg {
+        width: 82vw;
+    }
+}

@@ -128,12 +128,16 @@ header {
     color: white;
     font-weight: 900;
   }
+
+  .navbar img {
+    width: 250px;
+  }
   
   @media only screen and (max-width: 960px) {
     .navbar_container {
       display: flex;
       justify-content: space-between;
-      height: 40px;
+
       z-index: 1;
       width: 100%;
       max-width: 1300px;
@@ -142,7 +146,7 @@ header {
     .navbar_menu {
       display: flex;
       flex-direction: column;
-      gap: 3vw;
+      gap: 12vw;
       margin: 0;
       width: 100%;
       position: absolute;
@@ -215,7 +219,7 @@ header {
     }
   
     .navbar img {
-      width: 35vw;
+      width: 200px;
     }
   }
   

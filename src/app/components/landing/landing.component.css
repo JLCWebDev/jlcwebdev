@@ -30,3 +30,13 @@ h1 {
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
+
+@media only screen and (max-width: 650px) {
+    .text-area {
+        width: 98vw;
+    }
+
+    .main {
+        height: auto;
+    }
+}

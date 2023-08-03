@@ -72,7 +72,7 @@ export class ServicesComponent {
       ],
       'assets/office-building-store .png',
       'ShopWeb is the ideal web development package for businesses venturing into online selling.',
-      '$4,500+',
+      '$5,000+',
       '',
     ),
     new ServiceCard(

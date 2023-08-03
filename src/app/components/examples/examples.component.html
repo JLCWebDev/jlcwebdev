@@ -8,29 +8,38 @@
       <li>Enterprise Web</li>
     </ul>
   <div class="examples">
-    <mat-card
+    <mat-card (click)="open(content, cards)"
       class="card"
       style="background-image: linear-gradient(
         rgba(0, 0, 0, 0.438) 70%,
         rgba(0, 0, 0, 0.438) 95%
-      ), url({{ cards.image }})"
+      ), url({{ cards.images[0].url }})"
       *ngFor="let cards of websites"
     >
       <p>{{ cards.name }}</p>
-      <button >See More</button>
     </mat-card>
   </div>
 </div>
 <ng-template class="websiteCard" #content let-c="close" let-d="dismiss">
 	<div class="modal-header">
 		<h4 class="modal-title" id="modal-basic-title">{{currentWebsite.name}}</h4>
-		<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+		<button type="button" class="btn btn-danger" aria-label="Close" (click)="d('Cross click')">X</button>
 	</div>
 	<div class="modal-body">
-		<img src="{{currentWebsite.image}}" alt="">
+		<img class="mainImg" src="{{currentMainImg}}" alt="">
+    <div  class="gallery">
+      <img class="addImg {{img.status}}" *ngFor="let img of currentWebsite.images" src="{{img.url}}" alt="" (mouseover)="changeImg(img)" (click)="changeImg(img)" >
+    </div>
 	</div>
+  <div class="description">
+    <div class="chips">
+      <p class="chip" *ngFor="let feat of currentWebsite.features" >{{feat}}</p>
+    </div>
+    <div class="desc">
+      <p *ngFor="let text of currentWebsite.description" >{{text}}</p>    
+    </div>
+  </div>
 	<div class="modal-footer">
-		<button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+		<button type="button" class="btn btn-success" ><a target="_blank" href="{{currentWebsite.link}}">View Live</a></button>
 	</div>
 </ng-template>
-<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
