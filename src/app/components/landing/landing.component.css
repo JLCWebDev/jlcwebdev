@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Lato:wght@300;400;900&family=Lora:wght@400;500;700&family=Tangerine:wght@400;700&display=swap');
+
 .main {
 
     height: 55vw;
@@ -14,29 +16,50 @@
     flex-direction: column;
     padding: 3vw;
     padding-left: 10vw;
-    padding-top: 20vh;
+    padding-top: 16vh;
     width: 50vw;
     max-width: 900px;
     height: auto;
     /* text-align: center; */
 }
 
+h3 {
+    font-weight: 900;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
 h1 {
+    font-family: 'Hammersmith One', sans-serif;
     line-height: normal;
     font-weight: 900;
     font-size: 3rem;
     background-image: linear-gradient(rgb(139, 191, 240), rgb(32, 48, 117));
-    letter-spacing: 2px;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 960px) {
     .text-area {
         width: 98vw;
+        padding-top: 13vh;
+        
     }
 
     .main {
-        height: auto;
+        height: 75vh;
+        background-image: url('/assets/BG-M.png') !important;
     }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
 }

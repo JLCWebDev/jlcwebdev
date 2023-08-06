@@ -90,21 +90,33 @@ a {
 
 .addServ {
     margin: 5vh 0;
-    padding: 1vw;
+    padding: 3vh 0vw 4vh 0;
     text-align: center;
     color: white;
-    gap: 4vw;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     flex-direction: column;
     background-color:rgb(72, 80, 107);
-    height: 25vh;
+}
+
+.addServ h3 {
+    font-weight: 900;
 }
 
 .addSer {
-    display: flex;
+    display: grid;
+    grid-template-areas: "1 1 1 1";
     justify-content: space-evenly;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.addServ img {
+    max-width: 120px;
 }
 
 @media only screen and (max-width: 960px) {
@@ -123,6 +135,10 @@ a {
 
     .card ul {
         padding-left: 3vw !important;
+    }
+
+    .addSer {
+        grid-template-areas: "1 1";
     }
 }
 

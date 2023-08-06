@@ -1,12 +1,12 @@
 <div class="main">
   <h1>Our Work</h1>
-    <ul class="p-4 space-x-4 ">
+    <!-- <ul class="p-4 space-x-4 ">
       <li>Basic Web</li>
       <li>Growth Web</li>
       <li>Elite Web</li>
       <li>Shop Web</li>
       <li>Enterprise Web</li>
-    </ul>
+    </ul> -->
   <div class="examples">
     <mat-card (click)="open(content, cards)"
       class="card"
@@ -20,6 +20,15 @@
     </mat-card>
   </div>
 </div>
+<!-- <div class="extras">
+  <ul class="examplelist" >
+    <h4>Template</h4>
+    <li><a href="">The Missing Peace</a></li>
+    <li><a href="">Handy Man Services</a></li>
+    <li><a href="">CryptoCoin</a></li>
+    <li><a href=""></a></li>
+  </ul>
+</div> -->
 <ng-template class="websiteCard" #content let-c="close" let-d="dismiss">
 	<div class="modal-header">
 		<h4 class="modal-title" id="modal-basic-title">{{currentWebsite.name}}</h4>

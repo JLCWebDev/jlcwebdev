@@ -123,8 +123,12 @@ h4 {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.examplelist {
+    display: flex;
+    flex-direction: column;
+}
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 960px) {
     .examples {
         grid-template-areas: "1";
     }
@@ -147,11 +151,16 @@ h4 {
         flex-direction: column;
     }
 
-    .addImg {
-        width: 30vw;
-    }
+
 
     .mainImg {
         width: 82vw;
+    }
+}
+
+
+@media only screen and (max-width: 650px) {
+    .addImg {
+        width: 30vw;
     }
 }
