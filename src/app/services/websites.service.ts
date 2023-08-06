@@ -121,7 +121,15 @@ export class WebsitesService {
     'Enterprise Web',
     ['Welcome to our nursing home website, where compassionate care and a warm, welcoming environment create a home away from home for your loved ones. Discover our comprehensive range of personalized services, tailored to meet the unique needs of each resident. With a dedicated team of experienced caregivers and a focus on creating a vibrant community, we strive to provide the utmost comfort and support for your cherished family members.'],
     'https://leemanor.netlify.app/',
-    ['',]
+    ['Enterprise Website',
+    'Mobile Responsive',
+    'Brand Consistency',
+    'Clear Layout',
+    'Testimonial Showcase',
+    'Social Integration',
+    'Interactive Forms',
+    'Advance SEO',
+    'User Friendly Interface',]
   )
 
   SmileCraft: Website = new Website(
@@ -138,7 +146,15 @@ export class WebsitesService {
       '',
       ['Welcome to our modern dentist office website, where your smile is our priority. Experience top-notch dental care provided by our skilled and friendly team of professionals. From routine check-ups to advanced treatments, we are committed to ensuring your oral health and confidence shine bright.'],
       '',
-      ['',]
+      ['Enterprise Website',
+      'Mobile Responsive',
+      'Brand Consistency',
+      'Clear Layout',
+      'Testimonial Showcase',
+      'Social Integration',
+      'Interactive Forms',
+      'Advance SEO',
+      'User Friendly Interface',]
     )
 
   // LeeManor: Website = new Website(
