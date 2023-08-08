@@ -73,15 +73,7 @@ textarea {
     background-color: rgb(240, 240, 240);
 }
 
-button {
-    margin-top: 2vh;
-    background-color: #35477d;
-    width: 12vw;
-    min-width: 135px;
-    color: white;
-    padding: 1.5vh 1vw;
-    border-radius: 4px;
-}
+
 
 label {
     color: rgb(163, 163, 163);
@@ -106,6 +98,29 @@ a:hover {
     opacity: 0.7;
 }
 
+.contactAlert {
+    display: flex;
+    height: 8vh;
+    font-size: 1.2rem;
+    font-weight: 800;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 8vh;
+    width: 100vw;
+}
+
+
+.submit {
+    margin-top: 2vh;
+    background-color: #35477d;
+    width: 12vw;
+    min-width: 135px;
+    font-size: 1rem;
+    color: white !important;
+    padding: 1.5vh 1vw;
+    border-radius: 4px;
+}
 
 @media only screen and (max-width: 960px) {
     .main {
