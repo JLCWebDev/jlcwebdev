@@ -82,6 +82,10 @@ a {
     color: white;
 }
 
+a:hover {
+    cursor: pointer;
+}
+
 .btns {
     display: flex;
     justify-content: center;
@@ -146,6 +150,7 @@ a {
 @media only screen and (max-width: 650px) {
     .card {
         width: 89vw;
+        padding: 1vh 5vw;
     }
 
     .main-service {

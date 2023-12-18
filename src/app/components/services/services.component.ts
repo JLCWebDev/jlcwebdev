@@ -1,5 +1,8 @@
+import { ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { CardModule } from 'primeng/card';
+import { ScrollService } from 'src/app/services/scroll.service';
 
 @Component({
   selector: 'app-services',
@@ -7,6 +10,20 @@ import { CardModule } from 'primeng/card';
   styleUrls: ['./services.component.css'],
 })
 export class ServicesComponent {
+
+  // constructor(
+  //   private router: Router,
+  //   public ScrollService: ScrollService, 
+  //   private scroller: ViewportScroller,
+  // )
+
+  constructor(
+    public ScrollService: ScrollService,
+    private scroller: ViewportScroller,
+  ) {
+    
+  }
+
   services: ServiceCard[] = [
     new ServiceCard(
       1,
@@ -38,7 +55,7 @@ export class ServicesComponent {
             ],
       'assets/office-building-silver.png',
       'Business Package is a comprehensive web development package designed specifically for growing businesses.',
-      '$1,200',
+      '$1,500',
       '',
     ),
     new ServiceCard(
@@ -55,12 +72,12 @@ export class ServicesComponent {
       ],
       'assets/office-building-gold.png',
       'EliteWeb is the premium web development package that caters to the needs of established businesses seeking a personalized touch.',
-      '$3,000',
+      '$5,000',
       '',
     ),
     new ServiceCard(
       4,
-      'Shop Web',
+      'E-commerce Web',
       [
         "Custom e-commerce website: Tailored for online selling.",
         "Integrated shopping cart: Streamlined checkout process.",

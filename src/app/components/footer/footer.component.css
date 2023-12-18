@@ -7,3 +7,13 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
+footer {
+    padding: 1vh 5vw;
+}
+
+@media only screen and (max-width: 650px) {
+    footer {
+        font-size: .8rem;
+    }
+}
