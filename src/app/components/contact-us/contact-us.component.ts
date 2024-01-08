@@ -1,9 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormsModule } from '@angular/forms';
+import { FormBuilder, FormControl, FormsModule, Validators } from '@angular/forms';
 import { Form, NgForm } from '@angular/forms';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { NgbAlert, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 import { Subject, debounceTime } from 'rxjs';
+import { environment } from 'src/environments/environment.development';
 
 @Component({
   selector: 'app-contact-us',
@@ -42,28 +43,47 @@ export class ContactUsComponent implements OnInit {
 		this._success.next(`Thank you for your inquiry! we will be in touch soon!.`);
 	}
 
-  @ViewChild('contactForm', { static: false }) contactForm!: NgForm; // Reference to the form element
+
 
   public sendEmail(e: Event) {
+
     e.preventDefault();
-    emailjs.sendForm('service_h5slopj', 'template_z5jaubo', e.target as HTMLFormElement, 'UGJsIlxE278IEs64h')
-      .then((result: EmailJSResponseStatus) => {
-        this.contactmeForm.reset();
-        this.changeSuccessMessage()     
-      }, (error) => {
-        console.log(error.text);
-      });
-  }
+    if (this.contactmeForm.valid) {
+        // Your form submission logic here
+        emailjs.sendForm(environment.emailJSServiceId, environment.emailJSTemplateId, e.target as HTMLFormElement, environment.emailJSPublicKey)
+            .then((result: EmailJSResponseStatus) => {
+                this.contactmeForm.reset();
+                this.changeSuccessMessage();
+            }, (error) => {
+                console.log(error.text);
+            });
+    }
+    else {
+      this.contactmeForm.markAllAsTouched();
+      return
+    }
+}
+
+get name() {
+  return this.contactmeForm.get('name')
+}
+get email() {
+  return this.contactmeForm.get('email')
+}
+get phone() {
+  return this.contactmeForm.get('phone')
+}
+get message() {
+  return this.contactmeForm.get('message')
+}
 
 
-
-  contactmeForm = this.formBuilder.group({
-    name: '',
-    email: '',
-    phone: '',
-    company:'', 
-    message: '',
-
-  })
+contactmeForm = this.formBuilder.group({
+    name: ['', [Validators.required]],
+    email: ['', [Validators.required, Validators.email]],
+    phone: ['', [Validators.pattern(`^[0-9\-\+]{10}$`)] ],
+    company: [''],
+    message: ['', [Validators.required]],
+});
 
 }

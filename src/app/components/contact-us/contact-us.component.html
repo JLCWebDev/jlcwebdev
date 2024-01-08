@@ -1,24 +1,32 @@
 <h1>Contact Us</h1>
-<div class="main flex justify-center items-center ">
-    
-    <form [formGroup]="contactmeForm" #contactForm="ngForm" name="contact" class="forms" (submit)="sendEmail($event)">
+<div class="main flex justify-center items-center "> 
+    <form [formGroup]="contactmeForm" class="forms" (ngSubmit)="sendEmail($event)"  >
         <h2>Send us a message</h2>
-        <div class="line One">
-            <div class=" input name">
-                <label for="">Name *</label>
-                <input formControlName="name" required name="first_name" placeholder="Your Name" type="text">
+        <div formGroupName="" class="line One">
+            <div class="input name">
+                <label for="name">Name *</label>
+                <input formControlName="name" id="name" name="name" placeholder="Your Name" type="text" required>
+                <div *ngIf="name?.invalid && (name?.dirty || name?.touched)" class="alert alert-danger mt-1">
+                    Name is required
+                </div>
             </div>
             <div class=" input email">
-                <label for="">Email</label>
-                <input formControlName="email" required name="email" placeholder="Your email" type="text">
+                <label for="email">Email</label>
+                <input formControlName="email" placeholder="Your email" type="text">
+                <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="alert alert-danger mt-1">
+                    Invalid Email Address
+                </div>
             </div>
         </div>
         <div class="line Two">
             <div class=" input phone ">
                 <label for="">Phone</label>
-                <input formControlName="phone" required name="phone" placeholder="Phone #" type="text">
+                <input formControlName="phone" required name="phone" placeholder="7732223333" type="text">
+                <div *ngIf="phone?.invalid && (phone?.dirty || phone?.touched)" class="alert alert-danger mt-1">
+                    Phone Number is Invalid
+                </div>
             </div>
-            <div class=" input Company">
+            <div class="input Company">
                 <label for="">Company</label>
                 <input formControlName="company" name="company" class="company" placeholder="Company" type="text">
             </div>
@@ -27,9 +35,12 @@
             <div class="input Message">
                 <label for="">Message</label>
                 <textarea formControlName="message" #textArea required name="message" class="message" placeholder="Write Your Message" type="text"></textarea>
+                <div *ngIf="message?.invalid && (message?.dirty || message?.touched)" class="alert alert-danger mt-1">
+                    Please Enter Message
+                </div>
             </div>
         </div>
-        <input class="submit" type="submit" value="SEND MESSAGE">
+        <button type="submit" class="submit" >SEND MESSAGE</button>
     </form>
     <div class="info">
         <h2>Contact Information</h2>
