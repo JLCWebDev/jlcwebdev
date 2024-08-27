@@ -9,25 +9,25 @@ export class WebsitesService {
 
   onlyPokies: Website = new Website(
     1,
-    "Only Pokies Ecommerce",
+    "Liam Blackwood Portfolio",
     [
-      new webImg('/assets/onlypokies1.JPG', 'nonActive'),
-      new webImg('/assets/webImg/IMG_0365.JPG', 'nonActive'),
-      new webImg('/assets/webImg/IMG_0366.JPG', 'nonActive'),
-      new webImg('/assets/webImg/IMG_0370.JPG', 'nonActive'),
-      new webImg('/assets/webImg/IMG_0371.JPG', 'nonActive'),
-      new webImg('/assets/webImg/IMG_0372.JPG', 'nonActive'),
+      new webImg('/assets/webImg/LM.jpeg', 'nonActive'),
+      new webImg('/assets/webImg/LM2.jpeg', 'nonActive'),
+      new webImg('/assets/webImg/LM6.jpeg', 'nonActive'),
+      new webImg('/assets/webImg/LM3.jpeg', 'nonActive'),
+      new webImg('/assets/webImg/LM4.jpeg', 'nonActive'),
+      new webImg('/assets/webImg/LM5.jpeg', 'nonActive'),
       ],
     'Store Web',
-    ['Welcome to Only Pokies, a passion-fueled e-commerce platform that celebrates the fusion of technology and collectibles. Discover a vast catalog of cherished items, from trading cards to figurines, thoughtfully curated for enthusiasts like you. Enjoy an intuitive search system, secure checkout, and real-time inventory updates, ensuring you never miss a prized find.','With a responsive design for all devices, engaging customer support, and a thriving community, Only Pokies is your gateway to a world of collectible wonders. Start your adventure today and experience the joy of collecting at Only Pokies!'],
-    'http://only-pokies.com',
-    ['e-Commerce',
-      'Mobile Responsive',
-      'Brand Recognition',
-      'Product Database',
-      'User Accounts',
-      'Contact Us Form',
-      'Product Gallery',]
+    ["Welcome to Liam Blackwood's Official Website. Step into the vibrant world of music and artistry through our singer's online portfolio. Explore a captivating collection of albums, each track crafted to evoke emotion, tell a story, and resonate with your soul. Stay updated with upcoming concert dates and experience the thrill of live performances. Browse through a gallery of stunning images that capture the essence of the artist, both on and off the stage. Join us on this musical journey where every note and every moment is a work of art."],
+    'https://artist-template.netlify.app/',
+    ["Image Gallery",
+    'Template Website',
+    'Contact Us Form',
+    'Social Media Integration',
+    'Brand Consistency',
+    'Third Party Store Connection',]
+  
   )
 
   MissingPiece: Website = new Website(

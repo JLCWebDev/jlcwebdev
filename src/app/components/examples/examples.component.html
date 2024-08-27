@@ -1,5 +1,5 @@
-<div class="main">
-  <h1>Previous Projects</h1>
+<div class="main" >
+  <h1 >Previous Projects</h1>
     <!-- <ul class="p-4 space-x-4 ">
       <li>Basic Web</li>
       <li>Growth Web</li>
@@ -7,9 +7,10 @@
       <li>Shop Web</li>
       <li>Enterprise Web</li>
     </ul> -->
-  <div class="examples">
-    <mat-card (click)="open(content, cards)"
-      class="card"
+  <div class="examples ">
+
+      <mat-card (click)="open(content, cards)"
+      class="card "
       style="background-image: linear-gradient(
         rgba(0, 0, 0, 0.438) 70%,
         rgba(0, 0, 0, 0.438) 95%
@@ -18,7 +19,8 @@
     >
       <p>{{ cards.name }}</p>
     </mat-card>
-  </div>
+    </div>
+
 </div>
 <!-- <div class="extras">
   <ul class="examplelist" >
@@ -32,7 +34,7 @@
 <ng-template class="websiteCard" #content let-c="close" let-d="dismiss">
 	<div class="modal-header">
 		<h4 class="modal-title" id="modal-basic-title">{{currentWebsite.name}}</h4>
-		<button type="button" class="btn btn-danger" aria-label="Close" (click)="d('Cross click')">X</button>
+		<button type="button" class="bg-red-600 text-white py-2 px-3 text-xl rounded-md" aria-label="Close" (click)="d('Cross click')">X</button>
 	</div>
 	<div class="modal-body">
 		<img class="mainImg" src="{{currentMainImg}}" alt="">
@@ -49,6 +51,6 @@
     </div>
   </div>
 	<div class="modal-footer">
-		<button type="button" class="btn btn-success" ><a target="_blank" href="{{currentWebsite.link}}">View Live</a></button>
+		<button type="button" class="text-white bg-[#48506b] p-3 rounded-xl" ><a target="_blank" href="{{currentWebsite.link}}">View Live</a></button>
 	</div>
 </ng-template>
